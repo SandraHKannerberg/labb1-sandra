@@ -50,9 +50,19 @@
     <nav id="nav">
         <div class="container">
             <div class="row">
+                <div class="col-xs-12">
 
-            <!--Här ska menyn länkas in-->
+                    <?php
+                    $menuarray = [
+                    'theme_location' => 'huvudmeny',
+                    'container' => true,
+                    'menu_class' => 'menu',
+                    ];
 
+                    wp_nav_menu($menuarray);
+                    ?>
+                    
+                </div>
             </div>
         </div>
     </nav>

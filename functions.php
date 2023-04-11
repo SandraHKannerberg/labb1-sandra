@@ -1,5 +1,17 @@
 <?php 
 
+    //Lägger till tema support
+    add_theme_support('menus');
+
+    //Registrerar menyer
+    add_action('after_setup_theme', 'registrera_meny');
+
+    //Vilka menyer ska vara tillgängliga?
+    function registrera_meny(){
+        register_nav_menu('huvudmeny', 'Huvud meny');
+        register_nav_menu('footermeny', 'Footer meny');
+    }
+
     //Denna funktion ska ladda mina styles och scripts
     function mina_script(){
         //Bootstrap
