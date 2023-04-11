@@ -11,6 +11,7 @@
     function registrera_meny(){
         register_nav_menu('huvudmeny', 'Huvud meny');
         register_nav_menu('footermeny', 'Footer meny');
+        register_nav_menu('undersidor', 'Undersida meny');
     }
 
     //Denna funktion ska ladda mina styles och scripts
