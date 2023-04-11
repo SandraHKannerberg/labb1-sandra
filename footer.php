@@ -54,6 +54,7 @@
     </div>
 
 </footer>
+</div> <!--Stänger div med #wrap som öppnas i header-->
 
 <?php wp_footer(); ?>
 </body>
