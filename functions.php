@@ -2,6 +2,7 @@
 
     //Lägger till tema support
     add_theme_support('menus');
+    add_theme_support('post-thumbnails');
 
     //Registrerar menyer
     add_action('after_setup_theme', 'registrera_meny');
