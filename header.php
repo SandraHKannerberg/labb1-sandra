@@ -11,6 +11,7 @@
     <header id="header">
         <div class="container">
             <div class="row">
+
                 <div class="col-xs-8 col-sm-6">
                     <a class="logo" href="">Labb 1</a>
                 </div>
@@ -33,7 +34,26 @@
                 </div>
 
             </div>
-
         </div>
-
     </header>
+
+    <div class="mobile-search">
+        <form id="searchform" class="searchform">
+            <div>
+                <label class="screen-reader-text">Sök efter:</label>
+                <input type="text">
+                <input type="submit" value="Sök">
+            </div>
+        </form>   
+    </div>
+
+    <nav id="nav">
+        <div class="container">
+            <div class="row">
+
+            <!--Här ska menyn länkas in-->
+
+            </div>
+        </div>
+    </nav>
+
