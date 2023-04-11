@@ -1,0 +1,47 @@
+/* General styles */
+
+* {
+	outline: none;
+}
+
+body {
+	background-color: #eee;
+}
+
+a {
+	color: crimson;
+}
+
+	a:hover, a:active {
+		color: darkred;
+	}
+
+h1, h2, h3, h4 {
+	margin-top: 0;
+}
+
+h1 {
+	margin-bottom: 30px;
+}
+
+img {
+	max-width: 100%;
+}
+
+label {
+	display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+	display: block;
+	min-width: 200px;
+}
+
+input[type="submit"] {
+	display: block;
+}
+
+textarea {
+	min-width: 200px;
+}
