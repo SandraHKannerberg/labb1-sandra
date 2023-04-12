@@ -46,11 +46,11 @@
     //Denna funktion laddar script och jquery / js
     function load_js(){
         //jquery
-        wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js');
+        wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js', array(), false, true);
         wp_enqueue_script('jquery');
 
         //script
-        wp_register_script('script', get_template_directory_uri() . '/js/script.js');
+        wp_register_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), false, true);
         wp_enqueue_script('script');
 
     }
