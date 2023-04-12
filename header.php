@@ -70,3 +70,9 @@
             </div> <!--Stänger container-->
         </nav> <!--Stänger nav-->
 
+    <!--Öppnar div row, div container samt main som är gemensamt för samtliga sidor. Stängs i footer-->    
+    <main>
+		<section>
+			<div class="container">
+				<div class="row">    
+
