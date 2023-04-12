@@ -41,7 +41,21 @@
         wp_enqueue_style('footer');
     }
 
+    function load_js(){
+        //jquery
+        wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js');
+        wp_enqueue_script('jquery');
+
+        //script
+        wp_register_script('script', get_template_directory_uri() . '/js/script.js');
+        wp_enqueue_script('script');
+
+    }
+
     //Köar in css
     add_action('wp_enqueue_scripts', 'load_styles');
+
+    //Köar in js
+    add_action('wp_enqueue_scripts', 'load_js');
 
 ?>
