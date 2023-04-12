@@ -14,8 +14,8 @@
         register_nav_menu('undersidor', 'Undersida meny');
     }
 
-    //Denna funktion ska ladda mina styles och scripts
-    function mina_script(){
+    //Denna funktion ska ladda mina styles
+    function load_styles(){
         //Bootstrap
         wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
         wp_enqueue_style('bootstrap');
@@ -42,6 +42,6 @@
     }
 
     //Köar in css
-    add_action('wp_enqueue_scripts', 'mina_script');
+    add_action('wp_enqueue_scripts', 'load_styles');
 
 ?>
