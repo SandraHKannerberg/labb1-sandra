@@ -1,31 +1,31 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Öppnar loopen-->
-
 <main>
     <section>
         <div class="container">
             <div class="row">
 
-                <div class="col-xs-12 col-sm-8 col-md-6"> <!--Box för texten-->
+            <?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Öppnar loopen-->
+
+                <div class="col-xs-12 col-sm-8 col-md-6"> <!--Öppnar textbox-->
 
                     <h1><?php the_title(); ?></h1>
 
                     <p><?php the_content(); ?></p>
                     
-                </div> <!--Stänger box för texten-->
+                </div> <!--Stänger textbox-->
 
-                <div class="col-xs-12 col-sm-4 col-md-6"> <!--Box för bilden-->
+                <div class="col-xs-12 col-sm-4 col-md-6"> <!--Öppnar bildbox-->
 
-                    <?php the_post_thumbnail('medium'); ?>
+                    <?php the_post_thumbnail('large'); ?>
 
-                </div> <!--Stänger box för texten-->
+                </div> <!--Stänger bildbox-->
+            
+            <?php endwhile; endif; ?> <!--Stänger loopen-->
 
-            </div>
-        </div>
+            </div> <!--Stänger row-->
+        </div> <!--Stänger container-->
     </section>
 </main>
-
-<?php endwhile; endif; ?> <!--Stänger loopen-->
 
 <?php get_footer(); ?>

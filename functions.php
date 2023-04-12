@@ -1,8 +1,10 @@
 <?php 
 
-    //Lägger till tema support
-    add_theme_support('menus');
+    //Lägger till stöd för utvalda bilder
     add_theme_support('post-thumbnails');
+
+    //Lägger till stöd för menyer
+    add_theme_support('menus');
 
     //Registrerar menyer
     add_action('after_setup_theme', 'registrera_meny');
@@ -14,7 +16,7 @@
         register_nav_menu('undersidor', 'Undersida meny');
     }
 
-    //Denna funktion ska ladda mina styles
+    //Denna funktion laddar styles / css
     function load_styles(){
         //Bootstrap
         wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
@@ -41,6 +43,7 @@
         wp_enqueue_style('footer');
     }
 
+    //Denna funktion laddar script och jquery / js
     function load_js(){
         //jquery
         wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js');

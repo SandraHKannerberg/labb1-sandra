@@ -8,6 +8,8 @@
 
 							<div class="hero"> <!--Öppnar hero-->
 
+                                <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+
                                 <?php the_post_thumbnail('large'); ?>
 
 								<div class="text">
@@ -15,8 +17,10 @@
 									<p><?php the_content(); ?></p>
 								</div>
 
+                                <?php endwhile; endif; ?>
+
 							</div> <!--Stänger hero-->
-						</div>
+						</div> <!--Stänger col-xs-12-->
 					</div> <!--Stänger row-->
 				</div> <!--Stänger container-->
 			</section>

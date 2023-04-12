@@ -15,7 +15,7 @@
                 <div class="row">
 
                     <div class="col-xs-8 col-sm-6">
-                        <a class="logo" href="">Labb 1</a>
+                        <a class="logo" href="">Labb 1</a> <!--TO DO Addera länk till startsidan-->
                     </div>
 
                     <div class="col-sm-6 hidden-xs">
@@ -35,8 +35,8 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
+                </div> <!--Stänger row-->
+            </div> <!--Stänger container-->
         </header>
 
         <div class="mobile-search">
@@ -49,6 +49,7 @@
             </form>   
         </div>
 
+        <!--Navigering huvudmeny-->
         <nav id="nav">
             <div class="container">
                 <div class="row">
@@ -64,8 +65,8 @@
                         wp_nav_menu($menuarray);
                         ?>
                     
-                    </div>
-                </div>
-            </div>
-        </nav>
+                    </div> <!--ger col-xs-12-->
+                </div> <!--Stänger row-->
+            </div> <!--Stänger container-->
+        </nav> <!--Stänger nav-->
 
