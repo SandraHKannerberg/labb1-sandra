@@ -3,6 +3,11 @@
     //Lägger till stöd för utvalda bilder
     add_theme_support('post-thumbnails');
 
+    //Adderar bildstorlekar
+    add_image_size('front', 1140, false);
+    add_image_size('archive', 790, false);
+    add_image_size('page', 555, false);
+
     //Lägger till stöd för menyer
     add_theme_support('menus');
 
