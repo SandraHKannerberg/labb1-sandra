@@ -1,15 +1,14 @@
 <?php 
 
-    //Lägger till stöd för utvalda bilder
-    add_theme_support('post-thumbnails');
+    //Lägger till support för temat
+    add_theme_support('post-thumbnails'); //Stöd för utvalda bilder
+    add_theme_support('menus'); //Stöd för menyer
+    add_theme_support('widgets'); //Stöd för widgets
 
     //Adderar bildstorlekar
     add_image_size('front', 1140, false);
     add_image_size('archive', 790, false);
     add_image_size('page', 555, false);
-
-    //Lägger till stöd för menyer
-    add_theme_support('menus');
 
     //Registrerar menyer
     add_action('after_setup_theme', 'registrera_meny');
