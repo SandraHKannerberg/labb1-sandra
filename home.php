@@ -11,8 +11,9 @@
                     <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
                         <article>
-                            <h2><?php the_title(); ?></h2>
                             <?php the_post_thumbnail('large'); ?>
+                            <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                            <!--Här ska jag skapa innehåll som visar datum, författare och kategorier-->
                             <?php the_excerpt(); ?>
                         </article>
 
