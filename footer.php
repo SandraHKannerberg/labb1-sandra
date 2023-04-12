@@ -1,3 +1,9 @@
+<!--Stänger div row, div container samt main som öppnas i header och är gemensamt för samtliga sidor-->           
+            </div> <!--Stänger row-->
+		</div> <!--Stänger container-->
+	</section>
+</main>
+
 <footer id="footer">
     <div class="container">
         <div class="row top">
@@ -54,6 +60,7 @@
     </div>
 
 </footer>
+</div> <!--Stänger div med #wrap som öppnas i header-->
 
 <?php wp_footer(); ?>
 </body>
