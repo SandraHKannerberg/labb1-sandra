@@ -20,6 +20,8 @@
         register_nav_menu('undersidor', 'Undersida meny');
     }
 
+    
+
     //Denna funktion laddar styles / css
     function load_styles(){
         //Bootstrap

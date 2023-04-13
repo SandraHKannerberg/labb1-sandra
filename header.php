@@ -15,7 +15,7 @@
                 <div class="row">
 
                     <div class="col-xs-8 col-sm-6">
-                        <a class="logo" href="">Labb 1</a> <!--TO DO Addera länk till startsidan-->
+                        <a class="logo" href="http://localhost/labb1-sandra/">Labb 1</a> <!--TO DO Addera länk till startsidan-->
                     </div>
 
                     <div class="col-sm-6 hidden-xs">
@@ -35,8 +35,8 @@
                         </div>
                     </div>
 
-                </div> <!--Stänger row-->
-            </div> <!--Stänger container-->
+                </div> <!--Stänger row i Header-->
+            </div> <!--Stänger container i Header-->
         </header>
 
         <div class="mobile-search">
@@ -66,11 +66,11 @@
                         ?>
                     
                     </div> <!--ger col-xs-12-->
-                </div> <!--Stänger row-->
-            </div> <!--Stänger container-->
+                </div> <!--Stänger row i Header-->
+            </div> <!--Stänger container i Header-->
         </nav> <!--Stänger nav-->
 
-    <!--Öppnar div row, div container samt main som är gemensamt för samtliga sidor. Stängs i footer-->    
+    <!--Öppnar elementen main, section, div row, div container som är gemensamt för samtliga sidor. Dessa stängs i footer-->    
     <main>
 		<section>
 			<div class="container">
