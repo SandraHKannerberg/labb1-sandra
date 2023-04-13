@@ -22,19 +22,19 @@
 
     //Registerar widgetsområden
     register_sidebar(array(
-        'name' => 'footerwidget1',
+        'name' => 'aboutwidget',
         'id' =>'aboutwidget',
         'description' =>'Widget for the about us section',
     ));
 
     register_sidebar(array(
-        'name' => 'footerwidget2',
+        'name' => 'contactwidget',
         'id' =>'contactwidget',
         'description' =>'Widget for the contact us section',
     ));
 
     register_sidebar(array(
-        'name' => 'footerwidget3',
+        'name' => 'socialwidget',
         'id' =>'socialwidget',
         'description' =>'Widget for the social media section',
     ));
@@ -62,17 +62,19 @@
     //Denna funktion laddar styles / css
     function load_styles(){
 
-        //Font Awesome
-        wp_register_style('font', get_template_directory_uri() . '/assets/css/font-awesome.css', array(), 'all');
-        wp_enqueue_style('font');
+        $version = wp_get_theme() -> get('Version');
 
         //Bootstrap
-        wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), 'all');
-        wp_enqueue_style('bootstrap');
+        wp_register_style('labb1-bootstrap', get_template_directory_uri() . '/assets/css/labb1sandra-bootstrap.css', array(), '3.3.7', 'all');
+        wp_enqueue_style('labb1-bootstrap');
+
+        //Font Awesome
+        wp_register_style('labb1-font', get_template_directory_uri() . '/assets/css/labb1sandra-fontawesome.css', array(), '4.6.3', 'all');
+        wp_enqueue_style('labb1-font');
 
         //CSS Style
-        wp_register_style('sandrastyle', get_template_directory_uri() . '/assets/css/sandra-style.css', array(), 'all');
-        wp_enqueue_style('sandrastyle');
+        wp_register_style('labb1-style', get_template_directory_uri() . '/assets/css/labb1sandra-style.css', array('labb1-bootstrap'), $version, 'all');
+        wp_enqueue_style('labb1-style');
 
     }
 
@@ -83,8 +85,8 @@
         wp_enqueue_script('jquery');
 
         //script
-        wp_register_script('sandrascript', get_template_directory_uri() . '/assets/js/sandra-script.js', array('jquery'), true, true);
-        wp_enqueue_script('sandrascript');
+        wp_register_script('labb1-script', get_template_directory_uri() . '/assets/js/labb1sandra-script.js', array('jquery'), true, true);
+        wp_enqueue_script('labb1-script');
     }
 
     //Köar in css
