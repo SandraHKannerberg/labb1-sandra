@@ -6,7 +6,7 @@
 
     <li>
         <i class="fa fa-user"></i>
-        <a href="<?php echo the_author();?>"><?php the_author(); ?></a>
+        <a href="<?php echo the_permalink();?>"><?php the_author(); ?></a> <!--TO DO: Fixa länken till författarsidan-->
     </li>
 
     <li>

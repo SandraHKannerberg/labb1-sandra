@@ -6,7 +6,7 @@
                     
             <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-            <?php get_template_part('template-parts/article', 'article'); ?>
+            <?php get_template_part('template-parts/article-excerpt', 'article-excerpt'); ?>
 
             <?php endwhile; endif; ?>
 
