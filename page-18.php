@@ -11,7 +11,7 @@
 
         <div class="col-xs-12 col-sm-4 col-md-6"> <!--Öppnar bildbox-->
 
-            <?php the_post_thumbnail('large'); ?>
+            <?php the_post_thumbnail('page'); ?>
 
         </div> <!--Stänger bildbox-->
             

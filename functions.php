@@ -1,10 +1,14 @@
 <?php 
 
-    //Lägger till stöd för utvalda bilder
-    add_theme_support('post-thumbnails');
+    //Lägger till support för temat
+    add_theme_support('post-thumbnails'); //Stöd för utvalda bilder
+    add_theme_support('menus'); //Stöd för menyer
+    add_theme_support('widgets'); //Stöd för widgets
 
-    //Lägger till stöd för menyer
-    add_theme_support('menus');
+    //Adderar bildstorlekar
+    add_image_size('front', 1140, false);
+    add_image_size('archive', 790, false);
+    add_image_size('page', 555, false);
 
     //Registrerar menyer
     add_action('after_setup_theme', 'registrera_meny');
@@ -16,43 +20,57 @@
         register_nav_menu('undersidor', 'Undersida meny');
     }
 
+    //Registerar widgetsområden
+    register_sidebar(array(
+        'name' => 'Aboutwidgetarea',
+        'id' =>'aboutwidget',
+        'description' =>'Widget for the about us section',
+    ));
+
+    register_sidebar(array(
+        'name' => 'Contactwidgetarea',
+        'id' =>'contactwidget',
+        'description' =>'Widget for the contact us section',
+    ));
+
+    register_sidebar(array(
+        'name' => 'Socialwidgetarea',
+        'id' =>'socialwidget',
+        'description' =>'Widget for the social media section',
+    ));
+
+    register_sidebar(array(
+        'name' => 'Sidemenuwidgetarea',
+        'id' =>'sidemenuwidget',
+        'description' =>'Widget for the sidemenu section',
+    ));
+
     //Denna funktion laddar styles / css
     function load_styles(){
-        //Bootstrap
-        wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
-        wp_enqueue_style('bootstrap');
 
         //Font Awesome
-        wp_register_style('font-awesome', get_template_directory_uri() . '/css/font-awesome.css');
-        wp_enqueue_style('font-awesome');
+        wp_register_style('font', get_template_directory_uri() . '/assets/css/font-awesome.css', array(), 'all');
+        wp_enqueue_style('font');
 
-        //CSS general style
-        wp_register_style('general', get_template_directory_uri() . '/css/general.css');
-        wp_enqueue_style('general');
+        //Bootstrap
+        wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), 'all');
+        wp_enqueue_style('bootstrap');
 
-        //CSS header style
-        wp_register_style('header', get_template_directory_uri() . '/css/header.css');
-        wp_enqueue_style('header');
+        //CSS Style
+        wp_register_style('sandrastyle', get_template_directory_uri() . '/assets/css/sandra-style.css', array(), 'all');
+        wp_enqueue_style('sandrastyle');
 
-        //CSS main style
-        wp_register_style('main', get_template_directory_uri() . '/css/main.css');
-        wp_enqueue_style('main');
-
-        //CSS footer style
-        wp_register_style('footer', get_template_directory_uri() . '/css/footer.css');
-        wp_enqueue_style('footer');
     }
 
     //Denna funktion laddar script och jquery / js
     function load_js(){
         //jquery
-        wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js');
+        wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js', array(), false, true);
         wp_enqueue_script('jquery');
 
         //script
-        wp_register_script('script', get_template_directory_uri() . '/js/script.js');
-        wp_enqueue_script('script');
-
+        wp_register_script('sandrascript', get_template_directory_uri() . '/assets/js/sandra-script.js', array('jquery'), true, true);
+        wp_enqueue_script('sandrascript');
     }
 
     //Köar in css

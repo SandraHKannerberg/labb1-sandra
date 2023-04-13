@@ -1,8 +1,7 @@
 <?php get_header(); ?>
-
-<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-                
+     
     <div id="primary" class="col-xs-12 col-md-9">
+    <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
         <article>
    
             <h1><?php the_title(); ?></h1>
@@ -11,15 +10,14 @@
 
             <?php the_content(); ?>
         </article>
+
+        <?php endwhile; endif; ?>
     </div><!--Stänger div primary-->
 
     <aside id="secondary" class="col-xs-12 col-md-3">
-
-        <!--Här ska jag skapa sidebaren-->
-
+        <div id="sidebar">
+            <?php dynamic_sidebar('sidemenuwidget')?>
+        </div>
     </aside>
-
-<?php endwhile; endif; ?>
-
 
 <?php get_footer(); ?>
