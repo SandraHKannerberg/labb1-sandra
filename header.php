@@ -15,7 +15,7 @@
                 <div class="row">
 
                     <div class="col-xs-8 col-sm-6">
-                        <a class="logo" href="http://localhost/labb1-sandra/">Labb 1</a> <!--TO DO Addera länk till startsidan-->
+                        <a class="logo" href="<?php echo home_url();?>">Labb 1</a>
                     </div>
 
                     <div class="col-sm-6 hidden-xs">
