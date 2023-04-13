@@ -28,7 +28,7 @@
 
         <div class="row bottom">
             <div class="col-xs-12">
-                <p>Copyright &copy; Sandra Höst Kannerber, 2023</p>
+                <p>Copyright &copy; Sandra Höst Kannerberg, 2023</p>
             </div>
         </div>
 
