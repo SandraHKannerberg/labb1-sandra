@@ -2,13 +2,13 @@
 
     <div id="primary" class="col-xs-12 col-md-9">
 
-        <h1><?php single_cat_title(); ?></h1>
+        <h1>Arkiv: <?php wp_title(""); ?></h1>
                     
-            <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+        <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
             <?php get_template_part('template-parts/article-excerpt', 'article-excerpt'); ?>
 
-            <?php endwhile; endif; ?>
+        <?php endwhile; endif; ?>
 
     </div><!--Stänger div primary-->
 
