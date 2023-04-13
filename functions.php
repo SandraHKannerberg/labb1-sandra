@@ -69,7 +69,7 @@
         wp_enqueue_script('jquery');
 
         //script
-        wp_register_script('sandrascript', get_template_directory_uri() . '/assets/js/sandra-script.js', array('jquery'), false, true);
+        wp_register_script('sandrascript', get_template_directory_uri() . '/assets/js/sandra-script.js', array('jquery'), true, true);
         wp_enqueue_script('sandrascript');
     }
 
