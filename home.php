@@ -2,7 +2,7 @@
 
     <div id="primary" class="col-xs-12 col-md-9">
 
-    <h1><?php single_cat_title(); ?></h1>
+    <h1>Blogg</h1> <!--TO DO: fixa rubriken dynamiskt. Varken the_title() eller single_cat_title() fungerar--> 
                     
             <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
