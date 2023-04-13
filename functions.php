@@ -39,6 +39,12 @@
         'description' =>'Widget for the social media section',
     ));
 
+    register_sidebar(array(
+        'name' => 'Sidemenuwidgetarea',
+        'id' =>'sidemenuwidget',
+        'description' =>'Widget for the sidemenu section',
+    ));
+
     //Denna funktion laddar styles / css
     function load_styles(){
 

@@ -21,11 +21,13 @@
                 <span><?php the_posts_pagination() ?></span>
             </nav>
 
-            
-
-
-
     </div><!--Stänger div primary-->
+
+    <aside id="secondary" class="col-xs-12 col-md-3">
+        <div id="sidebar">
+            <?php dynamic_sidebar('sidemenuwidget')?>
+        </div>
+    </aside>
 
 
 <?php get_footer(); ?>

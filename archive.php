@@ -17,5 +17,11 @@
 
     </div><!--Stänger div primary-->
 
+    <aside id="secondary" class="col-xs-12 col-md-3">
+
+
+   
+    </aside>
+
 
 <?php get_footer(); ?>
