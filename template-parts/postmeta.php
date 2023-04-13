@@ -1,7 +1,7 @@
 <ul class="meta">
     <li>
         <i class="fa fa-calender"></i> <!--TO DO: Denna ikon fungerar inte-->
-        <?php echo the_date(); ?> <!--TO DO: Visas inte på alla inlägg-->
+        <?php echo get_the_date(); ?>
     </li>
 
     <li>

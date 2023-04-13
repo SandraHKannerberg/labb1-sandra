@@ -2,7 +2,7 @@
 
     <div id="primary" class="col-xs-12 col-md-9">
 
-    <h1>Blogg</h1> <!--TO DO: fixa rubriken dynamiskt. Varken the_title() eller single_cat_title() fungerar--> 
+    <h1><?php wp_title(""); ?></h1>
                     
             <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
@@ -16,11 +16,7 @@
 
     </div><!--Stänger div primary-->
 
-    <aside id="secondary" class="col-xs-12 col-md-3">
-        <div id="sidebar">
-            <?php dynamic_sidebar('sidemenuwidget')?>
-        </div>
-    </aside>
+<?php get_sidebar(); ?>
 
 
 <?php get_footer(); ?>

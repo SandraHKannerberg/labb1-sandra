@@ -22,27 +22,41 @@
 
     //Registerar widgetsområden
     register_sidebar(array(
-        'name' => 'Aboutwidgetarea',
+        'name' => 'footerwidget1',
         'id' =>'aboutwidget',
         'description' =>'Widget for the about us section',
     ));
 
     register_sidebar(array(
-        'name' => 'Contactwidgetarea',
+        'name' => 'footerwidget2',
         'id' =>'contactwidget',
         'description' =>'Widget for the contact us section',
     ));
 
     register_sidebar(array(
-        'name' => 'Socialwidgetarea',
+        'name' => 'footerwidget3',
         'id' =>'socialwidget',
         'description' =>'Widget for the social media section',
     ));
 
     register_sidebar(array(
-        'name' => 'Sidemenuwidgetarea',
-        'id' =>'sidemenuwidget',
-        'description' =>'Widget for the sidemenu section',
+        'name' => 'sidebar1',
+        'id' =>'sidebarone',
+        'description' =>'Widget for the sidemenu page section',
+        'class' => 'pagenav',
+    ));
+
+    register_sidebar(array(
+        'name' => 'sidebar2',
+        'id' =>'sidebartwo',
+        'description' =>'Widget for the sidemenu archive section',
+    ));
+
+    register_sidebar(array(
+        'name' => 'sidebar3',
+        'id' =>'sidebarthree',
+        'description' =>'Widget for the sidemenu category section',
+        'class' => 'categories',
     ));
 
     //Denna funktion laddar styles / css
