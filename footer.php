@@ -9,26 +9,27 @@
         <div class="row top">
             <div class="col-xs-12 col-sm-6 col-md-4">
 
-                <?php dynamic_sidebar('aboutwidget')?>
+                <?php dynamic_sidebar('footer-section-1')?>
 
             </div>
 
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
 
-                <?php dynamic_sidebar('contactwidget')?>
+                <?php dynamic_sidebar('footer-section-2')?>
 
             </div>
 
-            <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
+           <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
 
-                <?php dynamic_sidebar('socialwidget')?>
+                <?php dynamic_sidebar('footer-section-3')?>
 
-            </div>
+			</div>
+
         </div>
 
         <div class="row bottom">
             <div class="col-xs-12">
-                <p>Copyright &copy; Sandra Höst Kannerber, 2023</p>
+                <p>Copyright &copy; Sandra Höst Kannerberg, 2023</p>
             </div>
         </div>
 
