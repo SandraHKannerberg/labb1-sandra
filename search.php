@@ -2,10 +2,11 @@
 
     <div id="primary" class="col-xs-12">
 
+    <h1><?php echo "Sökresultat för: "; the_search_query(); ?></h1>
+
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Start Loop-->
 
-            <h1><?php the_title(); ?></h1> <!--TO DO: Anpassa rubriken så att den utgår från det man har sökt på-->
-            <p><?php the_content(); ?></p>
+            <?php get_template_part('template-parts/article-excerpt', 'article-excerpt'); ?>
 
         <?php endwhile; endif; ?> <!--Slut Loop-->
 
