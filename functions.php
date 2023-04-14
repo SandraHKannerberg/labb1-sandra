@@ -20,45 +20,7 @@
         register_nav_menu('undersidor', 'Undersida meny');
     }
 
-    //Registerar widgetsområden
-    /*register_sidebar(array(
-        'name' => 'aboutwidget',
-        'id' =>'aboutwidget',
-        'description' =>'Widget for the about us section',
-    ));
-
-    register_sidebar(array(
-        'name' => 'contactwidget',
-        'id' =>'contactwidget',
-        'description' =>'Widget for the contact us section',
-    ));
-
-    register_sidebar(array(
-        'name' => 'socialwidget',
-        'id' =>'socialwidget',
-        'description' =>'Widget for the social media section',
-    ));
-
-    register_sidebar(array(
-        'name' => 'sidebar1',
-        'id' =>'sidebarone',
-        'description' =>'Widget for the sidemenu page section',
-        'class' => 'pagenav',
-    ));
-
-    register_sidebar(array(
-        'name' => 'sidebar2',
-        'id' =>'sidebartwo',
-        'description' =>'Widget for the sidemenu archive section',
-    ));
-
-    register_sidebar(array(
-        'name' => 'sidebar3',
-        'id' =>'sidebarthree',
-        'description' =>'Widget for the sidemenu category section',
-        'class' => 'categories',
-    ));*/
-
+    //Funktion för att kunna registrera flera widgets på ett smidigt sätt
     function widget_registration($name, $id, $description, $beforeWidget, $afterWidget, $beforeTitle, $afterTitle) {
         register_sidebar( array(
             'name' => $name,
@@ -71,6 +33,7 @@
         ));
     }
 
+    //Registrerar widgets områden i en gemensam funktion
     function multiple_widget_init(){
         widget_registration('Footer section 1', 'footer-section-1', 'Widgets som placeras här hamnar till vänster i footern', '', '', '<h4>', '</h4>');
         widget_registration('Footer section 2', 'footer-section-2', 'Widgets som placeras här hamnar i mitten i footern', '', '', '<h4>', '</h4>');
@@ -81,6 +44,7 @@
         widget_registration('Sidebar  section categories', 'sidebar-section-categories', 'Widgets som placeras här hamnar sidebarens sektion för kategorier', '', '<br>', '<h4>', '</h4>');
     }
 
+    //Kör funktionen för de widgets områden som skapas
     add_action('widgets_init', 'multiple_widget_init');
 
     //Denna funktion laddar styles / css
