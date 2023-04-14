@@ -6,7 +6,7 @@
 
             <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-                <?php the_post_thumbnail('front'); ?>
+			<img src="<?php the_post_thumbnail_url(); ?>">
 
 				<div class="text">
 					<h1><?php the_title(); ?></h1>

@@ -11,7 +11,7 @@
 
         <div class="col-xs-12 col-sm-4 col-md-6"> <!--Öppnar bildbox-->
 
-            <?php the_post_thumbnail('page'); ?>
+            <img src="<?php the_post_thumbnail_url(); ?>">
 
         </div> <!--Stänger bildbox-->
             
