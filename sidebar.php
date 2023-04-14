@@ -1,22 +1,18 @@
 <aside id="secondary" class="col-xs-12 col-md-3">
         <div id="sidebar">
             <ul>
-                <li>
-                    <h2>Sök efter: </h2>
-                    <?php get_search_form(); ?>
-                </li>
+
+                <?php dynamic_sidebar('sidebar-section-search')?>
+                
             </ul>
 
             <ul role="navigation">
 
-            <h2>Sidor</h2>
-            <?php dynamic_sidebar('sidebarone')?>
+                <?php dynamic_sidebar('sidebar-section-page')?>
 
-            <h2>Arkiv</h2>
-            <?php dynamic_sidebar('sidebartwo')?>
+                <?php dynamic_sidebar('sidebar-section-archive')?>
 
-            <h2>Kategorier</h2>
-            <?php dynamic_sidebar('sidebarthree')?>
+                <?php dynamic_sidebar('sidebar-section-categories')?>
 
             </ul>
         </div>

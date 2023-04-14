@@ -75,6 +75,10 @@
         widget_registration('Footer section 1', 'footer-section-1', 'Widgets som placeras här hamnar till vänster i footern', '', '', '<h4>', '</h4>');
         widget_registration('Footer section 2', 'footer-section-2', 'Widgets som placeras här hamnar i mitten i footern', '', '', '<h4>', '</h4>');
         widget_registration('Footer section 3', 'footer-section-3', 'Widgets som placeras här hamnar till höger i footern', '', '', '<h4>', '</h4>');
+        widget_registration('Sidebar section search', 'sidebar-section-search', 'Widgets som sökfält för sidebaren', '', '<br>', '<h4>', '</h4>');
+        widget_registration('Sidebar section page', 'sidebar-section-page', 'Widgets som placeras här hamnar i sidebarens sektion för sidor', '', '<br>', '<h4>', '</h4>');
+        widget_registration('Sidebar  section archive', 'sidebar-section-archive', 'Widgets som placeras här hamnar i sidebarens sektion för arkiv', '', '<br>', '<h4>', '</h4>');
+        widget_registration('Sidebar  section categories', 'sidebar-section-categories', 'Widgets som placeras här hamnar sidebarens sektion för kategorier', '', '<br>', '<h4>', '</h4>');
     }
 
     add_action('widgets_init', 'multiple_widget_init');
