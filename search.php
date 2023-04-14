@@ -10,6 +10,8 @@
 
         <?php endwhile; endif; ?> <!--Slut Loop-->
 
+        <?php get_template_part('template-parts/pagination', 'pagination'); ?>
+
     </div> <!--Stänger primary-->
    
 <?php get_footer(); ?>

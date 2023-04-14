@@ -10,6 +10,8 @@
 
         <?php endwhile; endif; ?>
 
+        <?php get_template_part('template-parts/pagination', 'pagination'); ?>
+
     </div><!--Stänger div primary-->
 
 <?php get_sidebar(); ?>

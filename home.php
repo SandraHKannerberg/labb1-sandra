@@ -10,7 +10,7 @@
 
             <?php endwhile; endif; ?>
 
-            <?php the_posts_pagination(); ?>
+            <?php get_template_part('template-parts/pagination', 'pagination'); ?>
 
     </div><!--Stänger div primary-->
 
