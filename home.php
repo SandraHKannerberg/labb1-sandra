@@ -10,9 +10,7 @@
 
             <?php endwhile; endif; ?>
 
-            <nav class="navigation pagination">
-                <span><?php the_posts_pagination() ?></span>
-            </nav>
+            <?php the_posts_pagination(); ?>
 
     </div><!--Stänger div primary-->
 

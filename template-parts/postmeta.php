@@ -1,6 +1,6 @@
 <ul class="meta">
     <li>
-        <i class="fa fa-calender"></i> <!--TO DO: Denna ikon fungerar inte-->
+        <i class="fa fa-calendar"></i>
         <?php echo get_the_date(); ?>
     </li>
 
