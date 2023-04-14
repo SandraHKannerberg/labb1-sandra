@@ -21,8 +21,6 @@
 
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
 
-            <?php dynamic_sidebar('socialwidget')?>
-
 				<h4>Social media</h4>
 					<ul class="social">
 						<li>
@@ -38,6 +36,7 @@
 							<i class="fa fa-linkedin"></i><a href="">LinkedIn</a>
 						</li>
 					</ul>
+
 				</div>
         </div>
 
