@@ -21,7 +21,7 @@
     }
 
     //Registerar widgetsområden
-    register_sidebar(array(
+    /*register_sidebar(array(
         'name' => 'aboutwidget',
         'id' =>'aboutwidget',
         'description' =>'Widget for the about us section',
@@ -57,7 +57,27 @@
         'id' =>'sidebarthree',
         'description' =>'Widget for the sidemenu category section',
         'class' => 'categories',
-    ));
+    ));*/
+
+    function widget_registration($name, $id, $description, $beforeWidget, $afterWidget, $beforeTitle, $afterTitle) {
+        register_sidebar( array(
+            'name' => $name,
+            'id' => $id,
+            'description' => $description,
+            'before_widget' => $beforeWidget,
+            'after_widget' => $afterWidget,
+            'before_title' => $beforeTitle,
+            'after_title' => $afterTitle,
+        ));
+    }
+
+    function multiple_widget_init(){
+        widget_registration('Footer section 1', 'footer-section-1', 'Widgets som placeras här hamnar till vänster i footern', '', '', '<h4>', '</h4>');
+        widget_registration('Footer section 2', 'footer-section-2', 'Widgets som placeras här hamnar i mitten i footern', '', '', '<h4>', '</h4>');
+        widget_registration('Footer section 3', 'footer-section-3', 'Widgets som placeras här hamnar till höger i footern', '', '', '<h4>', '</h4>');
+    }
+
+    add_action('widgets_init', 'multiple_widget_init');
 
     //Denna funktion laddar styles / css
     function load_styles(){

@@ -9,19 +9,23 @@
         <div class="row top">
             <div class="col-xs-12 col-sm-6 col-md-4">
 
-                <?php dynamic_sidebar('aboutwidget')?>
+                <?php dynamic_sidebar('footer-section-1')?>
 
             </div>
 
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
 
-                <?php dynamic_sidebar('contactwidget')?>
+                <?php dynamic_sidebar('footer-section-2')?>
 
             </div>
 
-            <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
+            
 
-				<h4>Social media</h4>
+           <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
+
+                <?php dynamic_sidebar('footer-section-3')?>
+
+				 <!--<h4>Social media</h4>
 					<ul class="social">
 						<li>
 							<i class="fa fa-facebook"></i><a href="">Facebook</a>
@@ -35,7 +39,7 @@
 						<li>
 							<i class="fa fa-linkedin"></i><a href="">LinkedIn</a>
 						</li>
-					</ul>
+					</ul>-->
 
 				</div>
         </div>
