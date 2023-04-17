@@ -2,17 +2,17 @@
         <div id="sidebar">
             <ul>
 
-                <?php dynamic_sidebar('sidebar-section-search')?>
+                <?php dynamic_sidebar('sidebar-section-1')?>
                 
             </ul>
 
             <ul role="navigation">
 
-                <?php dynamic_sidebar('sidebar-section-page')?>
+                <?php dynamic_sidebar('sidebar-section-2')?>
 
-                <?php dynamic_sidebar('sidebar-section-archive')?>
+                <?php dynamic_sidebar('sidebar-section-3')?>
 
-                <?php dynamic_sidebar('sidebar-section-categories')?>
+                <?php dynamic_sidebar('sidebar-section-4')?>
 
             </ul>
         </div>

@@ -33,10 +33,10 @@
         widget_registration('Footer section 1', 'footer-section-1', 'Widgets som placeras här hamnar till vänster i footern', '', '', '<h4>', '</h4>');
         widget_registration('Footer section 2', 'footer-section-2', 'Widgets som placeras här hamnar i mitten i footern', '', '', '<h4>', '</h4>');
         widget_registration('Footer section 3', 'footer-section-3', 'Widgets som placeras här hamnar till höger i footern', '', '', '<h4>', '</h4>');
-        widget_registration('Sidebar section search', 'sidebar-section-search', 'Widgets som sökfält för sidebaren', '', '<br>', '<h4>', '</h4>');
-        widget_registration('Sidebar section page', 'sidebar-section-page', 'Widgets som placeras här hamnar i sidebarens sektion för sidor', '<li class="pagenav %2$s">', '</li>', '<h4>', '</h4>');
-        widget_registration('Sidebar  section archive', 'sidebar-section-archive', 'Widgets som placeras här hamnar i sidebarens sektion för arkiv', '<li>', '</li>', '<h4>', '</h4>');
-        widget_registration('Sidebar  section categories', 'sidebar-section-categories', 'Widgets som placeras här hamnar sidebarens sektion för kategorier', '<li class="categories %2$s">', '</li>', '<h4>', '</h4>');
+        widget_registration('Sidebar section 1', 'sidebar-section-1', 'Widgets som placeras här hamnar i sidebarområde 1', '', '<br>', '<h4>', '</h4>');
+        widget_registration('Sidebar section 2', 'sidebar-section-2', 'Widgets som placeras här hamnar i sidebarområde 2', '<li class="pagenav %2$s">', '</li>', '<h4>', '</h4>');
+        widget_registration('Sidebar section 3', 'sidebar-section-3', 'Widgets som placeras här hamnar i sidebarområde 3', '<li>', '</li>', '<h4>', '</h4>');
+        widget_registration('Sidebar section 4', 'sidebar-section-4', 'Widgets som placeras här hamnar i sidebarområde 4', '<li class="categories %2$s">', '</li>', '<h4>', '</h4>');
     }
 
     //Kör funktionen för de widgets områden som skapas
