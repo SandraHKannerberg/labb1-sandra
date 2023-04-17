@@ -1,21 +1,28 @@
 <?php get_header(); ?>
 
-	<div class="col-xs-12">
+<main>
+	<section>
+		<div class="container">
+			<div class="row"> 
+				<div class="col-xs-12">
+					<div class="hero"> <!--Öppnar hero-->
 
-		<div class="hero"> <!--Öppnar hero-->
+            			<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-            <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+							<img src="<?php the_post_thumbnail_url(); ?>">
 
-			<img src="<?php the_post_thumbnail_url(); ?>">
+							<div class="text">
+								<h1><?php the_title(); ?></h1>
+								<p><?php the_content(); ?></p>
+							</div>
 
-				<div class="text">
-					<h1><?php the_title(); ?></h1>
-					<p><?php the_content(); ?></p>
-				</div>
+            			<?php endwhile; endif; ?>
 
-            <?php endwhile; endif; ?>
-
-		</div> <!--Stänger hero-->
-	</div> <!--Stänger col-xs-12-->
+					</div> <!--Stänger hero-->
+				</div> <!--Stänger col-xs-12-->
+			</div> <!--Stänger div row-->
+		</div> <!--Stänger div container-->
+	</section>
+</main>
 					
 <?php get_footer(); ?>

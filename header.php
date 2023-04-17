@@ -57,10 +57,3 @@
                 </div> <!--Stänger row i Header-->
             </div> <!--Stänger container i Header-->
         </nav> <!--Stänger nav-->
-
-    <!--Öppnar elementen main, section, div row, div container som är gemensamt för samtliga sidor. Dessa stängs i footer-->    
-    <main>
-		<section>
-			<div class="container">
-				<div class="row">    
-

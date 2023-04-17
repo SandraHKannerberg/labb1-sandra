@@ -1,9 +1,3 @@
-<!--Stänger div row, div container, section och main som öppnas i header och är gemensamt för samtliga sidor-->           
-            </div> <!--Stänger row-->
-		</div> <!--Stänger container-->
-	</section>
-</main>
-
 <footer id="footer">
     <div class="container">
         <div class="row top">
