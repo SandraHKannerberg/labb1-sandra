@@ -1,11 +1,17 @@
-<?php get_header(); ?>
+<?php
+/* Mallfil för att visa sidan Undersida 4 enligt page-$slug.php */
+?>
+
+<?php get_header(); //Visar header ?>
 
 <main>
 	<section>
 		<div class="container">
 			<div class="row"> 
 
-                <?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Öppnar loopen-->
+                <?php 
+                //Startar loopen för att få ut innehåll på Undersida 4
+                if (have_posts()) : while(have_posts()) : the_post(); ?>
 
                     <div class="col-xs-12 col-sm-8 col-md-6"> <!--Öppnar textbox-->
 
@@ -20,11 +26,11 @@
 
                     </div> <!--Stänger bildbox-->
             
-                <?php endwhile; endif; ?> <!--Stänger loopen-->
+                <?php endwhile; endif;//Stänger loopen ?>
 
             </div> <!--Stänger div row-->
 		</div> <!--Stänger div container-->
 	</section>
 </main>
 
-<?php get_footer(); ?>
+<?php get_footer(); //Visar footer ?>

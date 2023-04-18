@@ -1,8 +1,12 @@
+<?php
+/* Mallfil för header */
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title><?php wp_title(); ?></title>
+    <title><?php wp_title(); //Visar rubriken för webplatssidan i fliken i webbfönstret ?></title>
     <?php wp_head(); ?>
 </head>
 
@@ -15,9 +19,11 @@
                 <div class="row">
 
                     <div class="col-xs-8 col-sm-6">
-                        <a class="logo" href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a><!--Ändra namnet "loggan" dynamiskt-->
+                        <!--Möjliggör att kunna ändra namnet för webbsidan dynamiskt-->
+                        <a class="logo" href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a>
                     </div>
 
+                    <!--Sökfält-->
                     <div class="col-sm-6 hidden-xs">
                         <?php get_search_form(); ?>
                     </div>
@@ -33,6 +39,7 @@
             </div> <!--Stänger container i Header-->
         </header>
 
+        <!--Sökfält på mindre skärmar-->
         <div class="mobile-search">
             <?php get_search_form(); ?> 
         </div>

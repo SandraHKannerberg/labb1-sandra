@@ -1,9 +1,17 @@
 <?php 
 
+/*	-----------------------------------------------------------------------------------------------
+	THEME SUPPORTS
+--------------------------------------------------------------------------------------------------- */
+
     //Lägger till support för temat
     add_theme_support('post-thumbnails'); //Stöd för utvalda bilder
     add_theme_support('menus'); //Stöd för menyer
     add_theme_support('widgets'); //Stöd för widgets
+
+/*	-----------------------------------------------------------------------------------------------
+	MENYER
+--------------------------------------------------------------------------------------------------- */
 
     //Registrerar menyer
     add_action('after_setup_theme', 'registrera_meny');
@@ -11,11 +19,15 @@
     //Vilka menyer ska vara tillgängliga?
     function registrera_meny(){
         register_nav_menu('huvudmeny', 'Huvud meny');
-        register_nav_menu('footermeny', 'Footer meny');
         register_nav_menu('undersidor', 'Undersida meny');
     }
 
+/*	-----------------------------------------------------------------------------------------------
+	WIDGETS
+--------------------------------------------------------------------------------------------------- */
+
     //Funktion för att kunna registrera flera widgets på ett smidigt sätt
+    //Sätter mallen för vilka argument register_sidebar ska ta in
     function widget_registration($name, $id, $description, $beforeWidget, $afterWidget, $beforeTitle, $afterTitle) {
         register_sidebar( array(
             'name' => $name,
@@ -28,7 +40,7 @@
         ));
     }
 
-    //Registrerar widgets områden i en gemensam funktion
+    //Registrerar widgets områden i en gemensam funktion utifrån mallen ovan (function widget_registration)
     function multiple_widget_init(){
         widget_registration('Footer section 1', 'footer-section-1', 'Widgets som placeras här hamnar till vänster i footern', '', '', '<h4>', '</h4>');
         widget_registration('Footer section 2', 'footer-section-2', 'Widgets som placeras här hamnar i mitten i footern', '', '', '<h4>', '</h4>');
@@ -41,6 +53,10 @@
 
     //Kör funktionen för de widgets områden som skapas
     add_action('widgets_init', 'multiple_widget_init');
+
+/*	-----------------------------------------------------------------------------------------------
+	REGISTER & ENQUEUE STYLES OCH SCRIPT
+--------------------------------------------------------------------------------------------------- */
 
     //Denna funktion laddar styles / css
     function load_styles(){

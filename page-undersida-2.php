@@ -1,3 +1,8 @@
+<?php
+/* Mallfil för att visa sidan Undersida 2 enligt page-$slug.php */
+?>
+
+
 <?php get_header(); ?>
 
 <main>
@@ -6,16 +11,19 @@
 			<div class="row"> 
                 <div id="primary" class="col-xs-12 col-md-9 col-md-push-3"> <!--Div för sidans primära innehåll-->
 
-                    <?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Start Loop-->
+                    <?php 
+                    //Startar loopen för att få ut innehåll på Undersida 2
+                    if (have_posts()) : while(have_posts()) : the_post(); ?>
 
                         <h1><?php the_title(); ?></h1>
                         <p><?php the_content(); ?></p>
 
-                    <?php endwhile; endif; ?> <!--Slut Loop-->
+                    <?php endwhile; endif; //Stänger loopen ?>
                     
                 </div> <!--Stänger primary-->
 
-                <aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9"> <!--Aside med meny för undersidorna, placering till vänster-->
+                <!--Aside med meny för undersidorna, placering till vänster-->
+                <aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
                     <?php
                         $menuarray = [
                         'theme_location' => 'undersidor',

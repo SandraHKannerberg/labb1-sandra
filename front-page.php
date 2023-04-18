@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+/* Mallfil för att visa innehåll på startsidan */
+?>
+
+
+<?php get_header(); //Visar header?>
 
 <main>
 	<section>
@@ -7,7 +12,9 @@
 				<div class="col-xs-12">
 					<div class="hero"> <!--Öppnar hero-->
 
-            			<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+            			<?php 
+						//Startar loopen för att få ut startsidans innehåll
+						if (have_posts()) : while(have_posts()) : the_post(); ?>
 
 							<img src="<?php the_post_thumbnail_url(); ?>">
 
@@ -16,7 +23,7 @@
 								<p><?php the_content(); ?></p>
 							</div>
 
-            			<?php endwhile; endif; ?>
+            			<?php endwhile; endif; //Stänger loopen ?>
 
 					</div> <!--Stänger hero-->
 				</div> <!--Stänger col-xs-12-->
@@ -25,4 +32,4 @@
 	</section>
 </main>
 					
-<?php get_footer(); ?>
+<?php get_footer(); //Visar footer?>
