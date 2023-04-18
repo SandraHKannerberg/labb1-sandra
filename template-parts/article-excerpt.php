@@ -1,3 +1,8 @@
+<?php
+/* Mallfil för template-part article-excerpt som visar utvalt innehåll */
+?>
+
+
 <article>
     <img src="<?php the_post_thumbnail_url(); ?>">
 

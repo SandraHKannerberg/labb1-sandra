@@ -1,3 +1,7 @@
+<?php
+/* Mallfil för blogginläggens meta-data: datum, författare och kategorier */
+?>
+
 <ul class="meta">
     <li>
         <i class="fa fa-calendar"></i>
