@@ -6,7 +6,7 @@
 <html>
 
 <head>
-    <title><?php wp_title(); //Visar rubriken för webplatssidan i fliken i webbfönstret ?></title>
+    <title><?php wp_title(); ?></title>
     <?php wp_head(); ?>
 </head>
 
