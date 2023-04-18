@@ -1,19 +1,48 @@
-<?php get_header(); ?>
+<?php
+/* Mallfil för att visa Arkiv sida för bloggen */
+?>
 
-    <div id="primary" class="col-xs-12 col-md-9">
+<?php get_header(); //Visar header ?>
+   
+<main>
+	<section>
+		<div class="container">
+			<div class="row">  
+                <div id="primary" class="col-xs-12 col-md-9">
 
-        <h1>Arkiv: <?php wp_title(""); ?></h1>
-                    
-        <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+                    <h1>Arkiv: 
+                        <?php 
+                        // Denna rubrik visar arkivets rubrik användaren har klickat på. Exempelvis månad.
+                        wp_title(""); 
+                        ?>
+                    </h1>
 
-            <?php get_template_part('template-parts/article-excerpt', 'article-excerpt'); ?>
+                    <?php 
+                    //Startar loopen för att få ut arkivets poster
+                    if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-        <?php endwhile; endif; ?>
+                        <?php 
+                        //Visar innehåll enligt mallen article-excerpt i template-parts
+                        //Visar utvalda delar av innehållet
+                        get_template_part('template-parts/article-excerpt', 'article-excerpt'); ?>
 
-        <?php get_template_part('template-parts/pagination', 'pagination'); ?>
+                    <?php 
+                    //Stänger loopen
+                    endwhile; endif; ?>
 
-    </div><!--Stänger div primary-->
+                    <?php 
+                    //Navigering för sidorna. Aktiveras när det finns mer än 3 inlägg på aktuell sida
+                    get_template_part('template-parts/pagination', 'pagination'); ?>
 
-<?php get_sidebar(); ?>
+                </div><!--Stänger div primary-->
 
-<?php get_footer(); ?>
+                <?php 
+                //Visar en sidomeny
+                get_sidebar(); ?>
+
+            </div> <!--Stänger div row-->
+		</div> <!--Stänger div container-->
+	</section>
+</main>
+
+<?php get_footer(); //Visar footer ?>

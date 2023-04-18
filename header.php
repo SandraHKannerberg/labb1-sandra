@@ -1,3 +1,7 @@
+<?php
+/* Mallfil för header */
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -15,9 +19,11 @@
                 <div class="row">
 
                     <div class="col-xs-8 col-sm-6">
-                        <a class="logo" href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a><!--Ändra namnet "loggan" dynamiskt-->
+                        <!--Möjliggör att kunna ändra namnet för webbsidan dynamiskt-->
+                        <a class="logo" href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a>
                     </div>
 
+                    <!--Sökfält-->
                     <div class="col-sm-6 hidden-xs">
                         <?php get_search_form(); ?>
                     </div>
@@ -33,6 +39,7 @@
             </div> <!--Stänger container i Header-->
         </header>
 
+        <!--Sökfält på mindre skärmar-->
         <div class="mobile-search">
             <?php get_search_form(); ?> 
         </div>
@@ -57,10 +64,3 @@
                 </div> <!--Stänger row i Header-->
             </div> <!--Stänger container i Header-->
         </nav> <!--Stänger nav-->
-
-    <!--Öppnar elementen main, section, div row, div container som är gemensamt för samtliga sidor. Dessa stängs i footer-->    
-    <main>
-		<section>
-			<div class="container">
-				<div class="row">    
-

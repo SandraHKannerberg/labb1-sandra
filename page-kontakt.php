@@ -1,14 +1,29 @@
-<?php get_header(); ?>
+<?php
+/* Mallfil för att visa sidan Kontakt enligt page-$slug.php */
+?>
 
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
 
-        <?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Start Loop-->
+<?php get_header(); //Visar header ?>
 
-            <h1><?php the_title(); ?></h1>
-            <?php the_content(); ?>
+<main>
+	<section>
+		<div class="container">
+			<div class="row"> 
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
 
-        <?php endwhile; endif; ?> <!--Slut Loop-->
+                    <?php 
+                    //Startar loopen för att få ut kontaktsidans innehåll
+                    if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-    </div>
+                        <h1><?php the_title(); ?></h1>
+                        <?php the_content(); ?>
 
-<?php get_footer(); ?>
+                    <?php endwhile; endif; //Stänger loopen ?>
+
+                </div> <!--Stänger div col-xs-12 col-md-8 col-md-offset-2-->
+             </div> <!--Stänger div row-->
+		</div> <!--Stänger div container-->
+	</section>
+</main>
+
+<?php get_footer(); //Visar footer ?>

@@ -1,14 +1,28 @@
-<?php get_header(); ?>
+<?php
+/* Mallfil för att visa sidan Undersida 3 enligt page-$slug.php */
+?>
 
-    <div id="primary" class="col-xs-12">
+<?php get_header(); //Visar header ?>
 
-        <?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Start Loop-->
+<main>
+	<section>
+		<div class="container">
+			<div class="row"> 
+                <div id="primary" class="col-xs-12">
 
-            <h1><?php the_title(); ?></h1>
-            <p><?php the_content(); ?></p>
+                    <?php 
+                    //Startar loopen för att få ut innehåll på Undersida 3
+                    if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-        <?php endwhile; endif; ?> <!--Slut Loop-->
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_content(); ?></p>
 
-    </div> <!--Stänger primary-->
+                    <?php endwhile; endif; //Stänger loopen ?>
+
+                </div> <!--Stänger primary-->
+            </div> <!--Stänger div row-->
+		</div> <!--Stänger div container-->
+	</section>
+</main>
    
-<?php get_footer(); ?>
+<?php get_footer(); //Visar footer ?>

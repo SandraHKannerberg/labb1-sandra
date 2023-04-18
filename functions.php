@@ -1,9 +1,17 @@
 <?php 
 
+/*	-----------------------------------------------------------------------------------------------
+	THEME SUPPORTS
+--------------------------------------------------------------------------------------------------- */
+
     //Lägger till support för temat
     add_theme_support('post-thumbnails'); //Stöd för utvalda bilder
     add_theme_support('menus'); //Stöd för menyer
     add_theme_support('widgets'); //Stöd för widgets
+
+/*	-----------------------------------------------------------------------------------------------
+	MENYER
+--------------------------------------------------------------------------------------------------- */
 
     //Registrerar menyer
     add_action('after_setup_theme', 'registrera_meny');
@@ -11,11 +19,15 @@
     //Vilka menyer ska vara tillgängliga?
     function registrera_meny(){
         register_nav_menu('huvudmeny', 'Huvud meny');
-        register_nav_menu('footermeny', 'Footer meny');
         register_nav_menu('undersidor', 'Undersida meny');
     }
 
+/*	-----------------------------------------------------------------------------------------------
+	WIDGETS
+--------------------------------------------------------------------------------------------------- */
+
     //Funktion för att kunna registrera flera widgets på ett smidigt sätt
+    //Sätter mallen för vilka argument register_sidebar ska ta in
     function widget_registration($name, $id, $description, $beforeWidget, $afterWidget, $beforeTitle, $afterTitle) {
         register_sidebar( array(
             'name' => $name,
@@ -28,19 +40,23 @@
         ));
     }
 
-    //Registrerar widgets områden i en gemensam funktion
+    //Registrerar widgets områden i en gemensam funktion utifrån mallen ovan (function widget_registration)
     function multiple_widget_init(){
         widget_registration('Footer section 1', 'footer-section-1', 'Widgets som placeras här hamnar till vänster i footern', '', '', '<h4>', '</h4>');
         widget_registration('Footer section 2', 'footer-section-2', 'Widgets som placeras här hamnar i mitten i footern', '', '', '<h4>', '</h4>');
         widget_registration('Footer section 3', 'footer-section-3', 'Widgets som placeras här hamnar till höger i footern', '', '', '<h4>', '</h4>');
-        widget_registration('Sidebar section search', 'sidebar-section-search', 'Widgets som sökfält för sidebaren', '', '<br>', '<h4>', '</h4>');
-        widget_registration('Sidebar section page', 'sidebar-section-page', 'Widgets som placeras här hamnar i sidebarens sektion för sidor', '<li class="pagenav %2$s">', '</li>', '<h4>', '</h4>');
-        widget_registration('Sidebar  section archive', 'sidebar-section-archive', 'Widgets som placeras här hamnar i sidebarens sektion för arkiv', '<li>', '</li>', '<h4>', '</h4>');
-        widget_registration('Sidebar  section categories', 'sidebar-section-categories', 'Widgets som placeras här hamnar sidebarens sektion för kategorier', '<li class="categories %2$s">', '</li>', '<h4>', '</h4>');
+        widget_registration('Sidebar section 1', 'sidebar-section-1', 'Widgets som placeras här hamnar i sidebarområde 1', '', '<br>', '<h4>', '</h4>');
+        widget_registration('Sidebar section 2', 'sidebar-section-2', 'Widgets som placeras här hamnar i sidebarområde 2', '<li class="pagenav %2$s">', '</li>', '<h4>', '</h4>');
+        widget_registration('Sidebar section 3', 'sidebar-section-3', 'Widgets som placeras här hamnar i sidebarområde 3', '<li>', '</li>', '<h4>', '</h4>');
+        widget_registration('Sidebar section 4', 'sidebar-section-4', 'Widgets som placeras här hamnar i sidebarområde 4', '<li class="categories %2$s">', '</li>', '<h4>', '</h4>');
     }
 
     //Kör funktionen för de widgets områden som skapas
     add_action('widgets_init', 'multiple_widget_init');
+
+/*	-----------------------------------------------------------------------------------------------
+	REGISTER & ENQUEUE STYLES OCH SCRIPT
+--------------------------------------------------------------------------------------------------- */
 
     //Denna funktion laddar styles / css
     function load_styles(){

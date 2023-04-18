@@ -1,21 +1,35 @@
-<?php get_header(); ?>
+<?php
+/* Mallfil för att visa innehåll på startsidan */
+?>
 
-	<div class="col-xs-12">
 
-		<div class="hero"> <!--Öppnar hero-->
+<?php get_header(); //Visar header?>
 
-            <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+<main>
+	<section>
+		<div class="container">
+			<div class="row"> 
+				<div class="col-xs-12">
+					<div class="hero"> <!--Öppnar hero-->
 
-			<img src="<?php the_post_thumbnail_url(); ?>">
+            			<?php 
+						//Startar loopen för att få ut startsidans innehåll
+						if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-				<div class="text">
-					<h1><?php the_title(); ?></h1>
-					<p><?php the_content(); ?></p>
-				</div>
+							<img src="<?php the_post_thumbnail_url(); ?>">
 
-            <?php endwhile; endif; ?>
+							<div class="text">
+								<h1><?php the_title(); ?></h1>
+								<p><?php the_content(); ?></p>
+							</div>
 
-		</div> <!--Stänger hero-->
-	</div> <!--Stänger col-xs-12-->
+            			<?php endwhile; endif; //Stänger loopen ?>
+
+					</div> <!--Stänger hero-->
+				</div> <!--Stänger col-xs-12-->
+			</div> <!--Stänger div row-->
+		</div> <!--Stänger div container-->
+	</section>
+</main>
 					
-<?php get_footer(); ?>
+<?php get_footer(); //Visar footer?>

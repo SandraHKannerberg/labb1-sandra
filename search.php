@@ -1,17 +1,43 @@
-<?php get_header(); ?>
+<?php
+/* Mallfil för att visa sökresultatet när man sökt efter innehåll via sökfälten */
+?>
 
-    <div id="primary" class="col-xs-12">
+<?php get_header(); //Visar header ?>
 
-    <h1><?php echo "Sökresultat för: "; the_search_query(); ?></h1>
+<main>
+	<section>
+		<div class="container">
+			<div class="row"> 
+                <div id="primary" class="col-xs-12">
 
-        <?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Start Loop-->
+                    <h1>
+                        <?php 
+                        //Visar anpassad rubrik efter det som användaren sökt efter
+                        echo "Sökresultat för: "; the_search_query(); ?>
+                    </h1>
 
-            <?php get_template_part('template-parts/article-excerpt', 'article-excerpt'); ?>
+                    <div class="searchform-wrap"> <!--Visar sökfältet-->
+                        <?php get_search_form(); ?>
+					</div>
 
-        <?php endwhile; endif; ?> <!--Slut Loop-->
+                    <?php 
+                    //Startar loopen som visar sökresultatet
+                    if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-        <?php get_template_part('template-parts/pagination', 'pagination'); ?>
+                        <?php 
+                        //Visar innehåll enligt mallen article-axcerpt i template-parts
+                        get_template_part('template-parts/article-excerpt', 'article-excerpt'); ?>
 
-    </div> <!--Stänger primary-->
+                    <?php endwhile; endif; //Stänger loopen ?>
+
+                    <?php 
+                    //Navigering för sidorna. Aktiveras när det finns mer än 3 inlägg på aktuell sida
+                    get_template_part('template-parts/pagination', 'pagination'); ?>
+
+                </div> <!--Stänger primary-->
+            </div> <!--Stänger div row-->
+		</div> <!--Stänger div container-->
+	</section>
+</main>
    
-<?php get_footer(); ?>
+<?php get_footer(); //Visar footer ?>

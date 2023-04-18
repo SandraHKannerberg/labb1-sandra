@@ -1,26 +1,41 @@
-<?php get_header(); ?>
+<?php
+/* Mallfil för att visa sidan Undersida enligt page-$slug.php */
+?>
 
-    <div id="primary" class="col-xs-12 col-md-9"> <!--Div för sidans primära innehåll-->
+<?php get_header(); //Visar header ?>
 
-        <?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Start Loop-->
+<main>
+	<section>
+		<div class="container">
+			<div class="row"> 
+                <div id="primary" class="col-xs-12 col-md-9"> <!--Div för sidans primära innehåll-->
 
-            <h1><?php the_title(); ?></h1>
-            <p><?php the_content(); ?></p>
+                    <?php 
+                    //Startar loopen för att få ut innehåll på Undersida
+                    if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-        <?php endwhile; endif; ?> <!--Slut Loop-->
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_content(); ?></p>
+
+                    <?php endwhile; endif; //Stänger loopen ?> 
                     
-    </div> <!--Stänger primary-->
+                </div> <!--Stänger primary-->
 
-    <aside id="secondary" class="col-xs-12 col-md-3"> <!--Aside med meny för undersidorna, placering till höger-->
-        <?php
-            $menuarray = [
-            'theme_location' => 'undersidor',
-            'container' => true,
-            'menu_class' => 'side-menu',
-            ];
+                <aside id="secondary" class="col-xs-12 col-md-3"> <!--Aside med meny för undersidorna, placering till höger-->
+                    <?php
+                        $menuarray = [
+                        'theme_location' => 'undersidor',
+                        'container' => true,
+                        'menu_class' => 'side-menu',
+                        ];
 
-            wp_nav_menu($menuarray);
-        ?>
-    </aside> <!--Stänger aside - Meny för undersidorna-->
+                        wp_nav_menu($menuarray);
+                    ?>
+                </aside> <!--Stänger aside - Meny för undersidorna-->
+                
+            </div> <!--Stänger div row-->
+		</div> <!--Stänger div container-->
+	</section>
+</main>
 
-<?php get_footer(); ?>
+<?php get_footer(); //Visar footer ?>

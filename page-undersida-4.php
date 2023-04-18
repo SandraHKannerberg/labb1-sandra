@@ -1,20 +1,36 @@
-<?php get_header(); ?>
+<?php
+/* Mallfil för att visa sidan Undersida 4 enligt page-$slug.php */
+?>
 
-    <?php if (have_posts()) : while(have_posts()) : the_post(); ?> <!--Öppnar loopen-->
+<?php get_header(); //Visar header ?>
 
-        <div class="col-xs-12 col-sm-8 col-md-6"> <!--Öppnar textbox-->
+<main>
+	<section>
+		<div class="container">
+			<div class="row"> 
 
-            <h1><?php the_title(); ?></h1>
-            <p><?php the_content(); ?></p>
+                <?php 
+                //Startar loopen för att få ut innehåll på Undersida 4
+                if (have_posts()) : while(have_posts()) : the_post(); ?>
+
+                    <div class="col-xs-12 col-sm-8 col-md-6"> <!--Öppnar textbox-->
+
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_content(); ?></p>
                     
-        </div> <!--Stänger textbox-->
+                    </div> <!--Stänger textbox-->
 
-        <div class="col-xs-12 col-sm-4 col-md-6"> <!--Öppnar bildbox-->
+                    <div class="col-xs-12 col-sm-4 col-md-6"> <!--Öppnar bildbox-->
 
-            <img src="<?php the_post_thumbnail_url(); ?>">
+                        <img src="<?php the_post_thumbnail_url(); ?>">
 
-        </div> <!--Stänger bildbox-->
+                    </div> <!--Stänger bildbox-->
             
-    <?php endwhile; endif; ?> <!--Stänger loopen-->
+                <?php endwhile; endif;//Stänger loopen ?>
 
-<?php get_footer(); ?>
+            </div> <!--Stänger div row-->
+		</div> <!--Stänger div container-->
+	</section>
+</main>
+
+<?php get_footer(); //Visar footer ?>

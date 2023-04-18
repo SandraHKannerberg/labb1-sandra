@@ -1,3 +1,7 @@
+<?php
+/* Mallfil för hur sökfältet ska visas när man använder get_search_form() */
+?>
+
 <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url(home_url('/')); ?>">
     <div>
         <label class="screen-reader-text" for="search"><?php _x( 'Sök efter:', 'label' ); ?></label>
